@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lecture 2 Notes | Notes Hub</title>
+</head>
+
+<body>
+  <!-- Header Start -->
+  <header>
+    <div align="center">
+      <h1>&#9733; Welcome to Notes Hub &#9733;</h1>
+      <p>This website contains all my lecture notes from <b>Rohit Negi</b> Bhaiya's classes.</p>
+    </div>
+
+    <hr>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a> &nbsp; | &nbsp;
+
+      <label for="videos">Videos:</label>
+      <select id="videos" onchange="location = this.value;">
+        <option disabled selected>HTML Lectures</option>
+        <option value="https://www.youtube.com/watch?v=1pcikNlDB-4&t=6s">Lecture 1 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=GkZN_-HMCJ8">Lecture 2 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=AJ4E1zf5tQs&t=1s">Lecture 3 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=k78lNSAB8VY">Lecture 4 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=a4j9R_DvZ8M&t=7s">Lecture 5 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=NGYp1zCBthk&t=3s">Lecture 6 [HTML]</option>
+        <option disabled selected>CSS Lectures</option>
+        <option value="https://www.youtube.com/watch?v=7rrUVevoECg&t=2355s">Lecture 1 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=MluY-_FUxFI">Lecture 2 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=HwvOyrPDqhM">Lecture 3 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=KD5mNp8PTko">Lecture 4 [CSS]</option>
+        <option disabled selected>Coming Soon...</option>
+      </select>
+
+      &nbsp; | &nbsp;
+
+      <label for="notes">Notes:</label>
+      <select id="notes" onchange="location = this.value;">
+        <option disabled selected>HTML Notes</option>
+        <option value="lecture1.html">Lecture 1 [HTML]</option>
+        <option value="lecture2.html">Lecture 2 [HTML]</option>
+        <option value="lecture3.html">Lecture 3 [HTML]</option>
+        <option value="lecture4.html">Lecture 4 [HTML]</option>
+        <option value="lecture5.html">Lecture 5 [HTML]</option>
+        <option value="lecture6.html">Lecture 6 [HTML]</option>
+      </select>
+
+      &nbsp; | &nbsp;
+
+      <a href="about.html">About Us</a> &nbsp; | &nbsp;
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <hr>
+
+    <!-- Marquee -->
+    <marquee>
+      ✨ Welcome to Notes Hub by "Akash Naik" | Learn Web Development with Rohit Negi Bhaiya ✨
+    </marquee>
+
+    <hr>
+  </header>
+
+  <!-- Header Finished Here -->
+
+  <!-- Header Finished Here -->
+
+  <!-- Main content starts here -->
+
+  <main id="top1">
+    <h1 align="center">Lecture 2 — Introduction to Web Development</h1>
+    <hr>
+
+    <!-- Table of Contents -->
+    <fieldset>
+      <legend><b><em>Table of Contents</em></b></legend>
+      <ul>
+        <li><a href="#html">HTML Introduction</a></li>
+        <li><a href="#install">Install Required Software</a></li>
+        <li><a href="#heading">HTML Headings</a></li>
+        <li><a href="#paragraph">HTML Paragraph</a></li>
+        <li><a href="#hr">HTML Horizontal Rule</a></li>
+        <li><a href="#br">HTML Line Break</a></li>
+        <li><a href="#lists">HTML List Elements</a></li>
+        <li><a href="#a">HTML Anchor Tag</a></li>
+        <li><a href="#img">HTML Image Tag</a></li>
+      </ul>
+    </fieldset>
+    <br>
+
+    <fieldset>
+      <legend>
+        <h2 id="html">HTML Introduction</h2>
+      </legend>
+
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <!-- Content Column -->
+          <td width="70%">
+            <p>HTML is the standard markup language for creating Web pages.</p>
+            <h2>What is HTML?</h2>
+            <ul>
+              <li>HTML stands for Hyper Text Markup Language</li>
+              <li>HTML is the standard markup language for creating Web pages</li>
+              <li>HTML describes the structure of a Web page</li>
+              <li>HTML consists of a series of elements</li>
+              <li>HTML elements tell the browser how to display the content</li>
+              <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a
+                link", etc.</li>
+            </ul>
+
+
+            <h3>First Website</h3>
+            <p><a
+                href="https://info.cern.ch/hypertext/WWW/TheProject.html">https://info.cern.ch/hypertext/WWW/TheProject.html</a>
+            </p>
+
+          </td>
+
+          <!-- Image Column -->
+          <td width="30%" align="center">
+            <p>Code</p>
+
+            <img src="first.png" alt="HTML Example" width="100%" height="300px">
+          </td>
+        </tr>
+      </table>
+
+    </fieldset>
+
+    <fieldset>
+      <legend id="install"><em><b>Install Required Software</b></em></legend>
+      <ol>
+        <li>Install <b>Visual Studio Code</b> — <a
+            href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+        <li>Install Visual Studio Code Extensions:
+          <ul>
+            <li>Live Preview</li>
+            <li>Prettier</li>
+            <li>Live Server</li>
+          </ul>
+        </li>
+      </ol>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        <h2 id="heading">Headings (&lt;h1&gt; to &lt;h6&gt;)</h2>
+      </legend>
+
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <!-- Content Column -->
+          <td width="70%">
+            <h3>Definition and Usage</h3>
+            <p>
+              The <b>&lt;h1&gt;</b> to <b>&lt;h6&gt;</b> tags are used to define HTML headings.<br><br>
+              <b>&lt;h1&gt;</b> defines the most important heading. <br><br>
+              <b>&lt;h6&gt;</b> defines the least important heading.
+            </p>
+          </td>
+
+          <!-- Image Column -->
+          <td width="30%" align="center">
+            <p>Code</p>
+
+            <img src="Notes Images/second.png" alt="HTML Headings Example" width="100%">
+          </td>
+        </tr>
+      </table>
+
+    </fieldset>
+
+
+    <fieldset>
+      <legend>
+        <h2 id="paragraph">HTML Paragraph</h2>
+      </legend>
+
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <!-- Content Column -->
+          <td width="70%">
+            <p>
+              The HTML <b>&lt;p&gt;</b> element defines a paragraph. A paragraph always starts on a new line,
+              and browsers automatically add some white space (a margin) before and after a paragraph.
+            </p>
+
+            <p><b>Example:</b></p>
+
+            <p>This is the first paragraph. It contains several sentences about a topic.</p>
+            <p>This is a second, separate paragraph. The browser will display it with a space between it and the first
+              one.</p>
+          </td>
+
+          <!-- Image Column -->
+          <td width="30%" align="center">
+            <p>Code</p>
+            <img src="./Notes Images/third.png" alt="HTML Paragraph Example" width="100%">
+          </td>
+        </tr>
+      </table>
+
+    </fieldset>
+
+
+    <fieldset>
+      <legend>
+        <h2 id="hr">Horizontal Rule (&lt;hr&gt;)</h2>
+      </legend>
+
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <!-- Content Column -->
+          <td width="70%">
+            <h3>Definition and Usage</h3>
+            <p>
+              The <b>&lt;hr&gt;</b> tag defines a thematic break in an HTML page (e.g. a shift of topic). <br><br>
+              The <b>&lt;hr&gt;</b> element is most often displayed as a horizontal rule that is used to
+              separate content (or define a change) in an HTML page.
+            </p>
+          </td>
+
+          <!-- Image Column -->
+          <td width="30%" align="center">
+            <p><b>Code</b></p>
+            <img src="./Notes Images/fifth.png" alt="" width="100%">
+            <p><b>Output</b></p>
+
+            <img src="./Notes Images/fourth.png" alt="Horizontal Rule Example" width="100%">
+          </td>
+        </tr>
+      </table>
+
+    </fieldset>
+
+    <!-- br -->
+    <fieldset>
+      <legend>
+        <h2 id="br">Line Break (&lt;br&gt;)</h2>
+      </legend>
+
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <!-- Content Column -->
+          <td width="70%">
+            <h2>Definition and Usage</h2>
+            <p>
+              The <b>&lt;br&gt;</b> tag inserts a single line break. <br><br>
+              The <b>&lt;br&gt;</b> tag is useful for writing addresses or poems. <br><br>
+              The <b>&lt;br&gt;</b> tag is an empty tag which means that it has no end tag.
+            </p>
+          </td>
+
+          <!-- Code / Image Column -->
+          <td width="30%" align="center">
+            <p><b>Code</b></p>
+            <img src="./Notes Images/br.png" alt="Line Break Code" width="100%">
+
+            <p><b>Output</b></p>
+            Address Example: <br>
+            123 Main Street <br>
+            City, State <br>
+            ZIP Code
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+
+    <fieldset>
+      <legend>
+        <h2 id="lists">List Elements (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;)</h2>
+      </legend>
+
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <!-- Content Column -->
+          <td width="70%">
+            <h2>Unordered HTML List</h2>
+            <p>
+              An unordered list starts with the <b>&lt;ul&gt;</b> tag.
+              Each list item starts with the <b>&lt;li&gt;</b> tag. <br><br>
+              The list items will be marked with bullets (small black circles) by default.
+            </p>
+
+            <p><b>Unordered list example:</b></p>
+            <ul>
+              <li>Tea Bag</li>
+              <li>Water</li>
+              <li>Sugar</li>
+              <li>Milk</li>
+            </ul>
+
+            <h2>Ordered HTML List</h2>
+            <p>
+              An ordered list starts with the <b>&lt;ol&gt;</b> tag.
+              Each list item starts with the <b>&lt;li&gt;</b> tag. <br><br>
+              The list items will be marked with numbers by default.
+            </p>
+
+            <p><b>Ordered list example:</b></p>
+            <ol>
+              <li>First, boil the water in a kettle.</li>
+              <li>Add tea bag, sugar and milk into it.</li>
+              <li>Keep boiling it for 5 minutes.</li>
+              <li>Serve the tea by pouring it into a cup.</li>
+            </ol>
+          </td>
+
+          <!-- Code/Images Column -->
+          <td width="30%" align="center">
+            <p><b>Code (Unordered List)</b></p>
+            <img src="./Notes Images/ul.png" alt="Unordered List Code" width="100%">
+
+            <p><b>Code (Ordered List)</b></p>
+            <img src="./Notes Images/ol.png" alt="Ordered List Code" width="100%">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+
+    <fieldset>
+      <legend>
+        <h2 id="a">Anchor Tag (&lt;a&gt;)</h2>
+      </legend>
+
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <!-- Content Column -->
+          <td width="70%">
+            <h2>&lt;a&gt; Tag - Definition and Usage</h2>
+
+            <h3>Definition and Usage</h3>
+            <p>
+              The <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another.
+            </p>
+            <p>
+              The most important attribute of the <code>&lt;a&gt;</code> element is the <code>href</code> attribute,
+              which indicates the link's destination.
+            </p>
+
+            <h2>Default Link Appearance</h2>
+            <ul>
+              <li>An <strong>unvisited link</strong> is underlined and blue</li>
+              <li>A <strong>visited link</strong> is underlined and purple</li>
+              <li>An <strong>active link</strong> is underlined and red</li>
+            </ul>
+
+            <h2>Tips and Notes</h2>
+            <ul>
+              <li><strong>Tip:</strong> If the <code>&lt;a&gt;</code> tag has no <code>href</code> attribute,
+                it is only a placeholder for a hyperlink.</li>
+              <li><strong>Tip:</strong> A linked page is normally displayed in the current browser window,
+                unless you specify another <code>target</code>.</li>
+              <li><strong>Tip:</strong> Use CSS to style links: <a href="#">CSS Links</a> and <a href="#">CSS
+                  Buttons</a>.
+              </li>
+            </ul>
+          </td>
+
+          <!-- Code / Output Column -->
+          <td width="30%" align="center">
+            <p><b>Code</b></p>
+            <pre>
+&lt;a href="https://www.example.com" target="_blank"&gt;
+  Visit Example
+&lt;/a&gt;
+        </pre>
+
+            <p><b>Output</b></p>
+            <a href="https://www.example.com" target="_blank">Visit Example</a>
+
+            <p><b>Code Screenshot</b></p>
+            <img src="./Notes Images/a.png" alt="Anchor Tag Code" width="100%">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+
+    <fieldset>
+      <legend>
+        <h2 id="img">Image Tag (&lt;img&gt;)</h2>
+      </legend>
+
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <!-- Content Column -->
+          <td width="70%">
+            <h2>Definition and Usage</h2>
+            <p>
+              The <code>&lt;img&gt;</code> tag is used to embed an image in an HTML page.
+            </p>
+            <p>
+              Images are not technically inserted into a web page; instead, images are linked to web pages.
+              The <code>&lt;img&gt;</code> tag creates a holding space for the referenced image.
+            </p>
+
+            <h2>Required Attributes</h2>
+            <ul>
+              <li><code>src</code> - Specifies the path to the image</li>
+              <li><code>alt</code> - Specifies an alternate text for the image, if the image cannot be displayed</li>
+            </ul>
+
+            <p>
+              <strong>Note:</strong> Always specify the <code>width</code> and <code>height</code> of an image.
+              If width and height are not specified, the page might flicker while the image loads.
+            </p>
+
+            <p>
+              <strong>Tip:</strong> To link an image to another document, simply nest the
+              <code>&lt;img&gt;</code> tag inside an <code>&lt;a&gt;</code> tag.
+            </p>
+          </td>
+
+          <!-- Code / Output Column -->
+          <td width="30%" align="center">
+            <p><b>Basic Image - Code</b></p>
+            <pre>
+&lt;img src="example.jpg" 
+     alt="Example Image" 
+     width="300" height="200"&gt;
+        </pre>
+
+            <p><b>Output</b></p>
+            <img src="./Akash Gemini.png" alt="Example Image" width="300" height="200">
+
+            <hr>
+
+            <p><b>Image as Link - Code</b></p>
+            <pre>
+&lt;a href="./Akash Gemini.png"&gt;
+  &lt;img src="example.jpg" 
+       alt="Example Image" 
+       width="300" height="200"&gt;
+&lt;/a&gt;
+        </pre>
+
+            <p><b>Output</b></p>
+            <a href="./Akash Gemini.png" target="_blank">
+              <img src="./Akash Gemini.png" alt="Example Image" width="300" height="200">
+            </a>
+
+            <p><b>Code Screenshot</b></p>
+            <img src="./Notes Images/p.png" alt="Image Tag Code Screenshot" width="100%">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+
+    <!-- Navigation -->
+    <p align="center"><a href="#top1">⬆ Back to Top</a></p>
+    <hr>
+    <p align="center"><em>Next Lecture: <b>Lecture 3 — Nested List in HTML</b></em></p>
+  </main>
+  <!-- Main content ends here -->
+
+  <!-- Footer Start -->
+  <footer>
+
+    <hr>
+
+    <center>
+      <p>
+        <a href="index.html">
+          Home
+        </a> |
+        <a href="about.html">
+          About Us
+        </a> |
+        <a href="contact.html">
+          Contact
+        </a> |
+        <label for="social">
+          Follow Me :-
+        </label>
+        <select id="social" onchange="location = this.value;">
+          <option disabled>My Social Handles</option>
+          <option value="https://www.linkedin.com/in/akash-naik-108643355/">Linked In</option>
+          <option value="https://www.instagram.com/the_rising_sky_/">Instagram</option>
+        </select>
+      </p>
+      <p>
+        <small>© 2025 Akash Naik | HTML Hackathon Project</small>
+      </p>
+    </center>
+
+  </footer>
+  <!-- Footer End -->
+</body>
+
+</html>

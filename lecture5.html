@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture 5 Notes | Notes Hub</title>
+</head>
+
+<body>
+  <!-- Header Start -->
+  <header>
+    <div align="center">
+      <h1>&#9733; Welcome to Notes Hub &#9733;</h1>
+      <p>This website contains all my lecture notes from <b>Rohit Negi</b> Bhaiya's classes.</p>
+    </div>
+
+    <hr>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a> &nbsp; | &nbsp;
+
+      <label for="videos">Videos:</label>
+      <select id="videos" onchange="location = this.value;">
+        <option disabled selected>HTML Lectures</option>
+        <option value="https://www.youtube.com/watch?v=1pcikNlDB-4&t=6s">Lecture 1 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=GkZN_-HMCJ8">Lecture 2 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=AJ4E1zf5tQs&t=1s">Lecture 3 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=k78lNSAB8VY">Lecture 4 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=a4j9R_DvZ8M&t=7s">Lecture 5 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=NGYp1zCBthk&t=3s">Lecture 6 [HTML]</option>
+        <option disabled selected>CSS Lectures</option>
+        <option value="https://www.youtube.com/watch?v=7rrUVevoECg&t=2355s">Lecture 1 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=MluY-_FUxFI">Lecture 2 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=HwvOyrPDqhM">Lecture 3 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=KD5mNp8PTko">Lecture 4 [CSS]</option>
+        <option disabled selected>Coming Soon...</option>
+      </select>
+
+      &nbsp; | &nbsp;
+
+      <label for="notes">Notes:</label>
+      <select id="notes" onchange="location = this.value;">
+        <option disabled selected>HTML Notes</option>
+        <option value="lecture1.html">Lecture 1 [HTML]</option>
+        <option value="lecture2.html">Lecture 2 [HTML]</option>
+        <option value="lecture3.html">Lecture 3 [HTML]</option>
+        <option value="lecture4.html">Lecture 4 [HTML]</option>
+        <option value="lecture5.html">Lecture 5 [HTML]</option>
+        <option value="lecture6.html">Lecture 6 [HTML]</option>
+      </select>
+
+      &nbsp; | &nbsp;
+
+      <a href="about.html">About Us</a> &nbsp; | &nbsp;
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <hr>
+
+    <!-- Marquee -->
+    <marquee>
+      ✨ Welcome to Notes Hub by "Akash Naik" | Learn Web Development with Rohit Negi Bhaiya ✨
+    </marquee>
+
+    <hr>
+  </header>
+  <!-- Header End -->
+
+  <!-- Main Start -->
+  <main id="top">
+    <h1 align="center">Lecture 5 — HTML Forms</h1>
+    <p align="center"><em>Topics: form, input, label, textarea, select, button</em></p>
+    <hr>
+
+
+    <!-- Table of Contents -->
+    <fieldset>
+      <legend><b><em>Table of Contents</em></b></legend>
+      <ul>
+        <li><a href="#intros">Introduction</a></li>
+        <li><a href="#form">Form Structure</a></li>
+        <li><a href="#input">Input Types</a></li>
+        <li><a href="#label">Label Tag</a></li>
+        <li><a href="#text">Text Area</a></li>
+        <li><a href="#select">Select Dropdown</a></li>
+        <li><a href="#btns">Buttons</a></li>
+        <li><a href="#cform">Complete Forms</a></li>
+      </ul>
+    </fieldset>
+
+    <!-- Introduction -->
+    <fieldset>
+      <legend>
+        <h2 id="intros">Introduction</h2>
+      </legend>
+      <p>Forms are used to collect user input. Data entered in forms can be sent to the server for processing.</p>
+    </fieldset>
+    <br>
+
+    <!-- Form Structure -->
+    <fieldset>
+      <legend>
+        <h2 id="form">Form Structure</h2>
+      </legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <td width="70%">
+            <p>A basic form starts with the <b>&lt;form&gt;</b> tag.</p>
+            <ul>
+              <li><b>action</b> → Where to send the form data</li>
+              <li><b>method</b> → GET or POST</li>
+            </ul>
+          </td>
+          <td width="30%">
+            <b>Code:</b>
+            <pre>
+&lt;form action="submit.php" method="post"&gt;
+   ...
+&lt;/form&gt;
+            </pre>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <!-- Input Types -->
+    <fieldset>
+      <legend>
+        <h2 id="input">Input Types</h2>
+      </legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <td width="70%">
+            <ul>
+              <li><code>&lt;input type="text"&gt;</code> → Single line text</li>
+              <li><code>&lt;input type="email"&gt;</code> → Email input</li>
+              <li><code>&lt;input type="password"&gt;</code> → Password input</li>
+              <li><code>&lt;input type="radio"&gt;</code> → Radio buttons</li>
+              <li><code>&lt;input type="checkbox"&gt;</code> → Multiple choice</li>
+              <li><code>&lt;input type="date"&gt;</code> → Date picker</li>
+            </ul>
+          </td>
+          <td width="30%">
+            <b>Example:</b>
+            <pre>
+Name: &lt;input type="text"&gt;
+Email: &lt;input type="email"&gt;
+Password: &lt;input type="password"&gt;
+            </pre>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <!-- Labels -->
+    <fieldset>
+      <legend>
+        <h2 id="label">Label Tag</h2>
+      </legend>
+      <p>The <b>&lt;label&gt;</b> tag connects text with input fields for better accessibility.</p>
+      <pre>
+&lt;label for="username"&gt;Name:&lt;/label&gt;
+&lt;input type="text" id="username" name="username"&gt;
+      </pre>
+    </fieldset>
+    <br>
+
+    <!-- Textarea -->
+    <fieldset>
+      <legend>
+        <h2 id="text">Textarea</h2>
+      </legend>
+      <p>Used for multi-line input.</p>
+      <pre>
+&lt;textarea rows="4" cols="30"&gt;&lt;/textarea&gt;
+      </pre>
+    </fieldset>
+    <br>
+
+    <!-- Select Dropdown -->
+    <fieldset>
+      <legend>
+        <h2 id="select">Select Dropdown</h2>
+      </legend>
+      <p>Dropdown menus are created using <b>&lt;select&gt;</b> and <b>&lt;option&gt;</b> tags.</p>
+      <pre>
+&lt;select name="course"&gt;
+  &lt;option&gt;HTML&lt;/option&gt;
+  &lt;option&gt;CSS&lt;/option&gt;
+  &lt;option&gt;JavaScript&lt;/option&gt;
+&lt;/select&gt;
+      </pre>
+    </fieldset>
+    <br>
+
+    <!-- Buttons -->
+    <fieldset>
+      <legend>
+        <h2 id="btns">Buttons</h2>
+      </legend>
+      <p>Forms usually end with a <b>submit button</b>.</p>
+      <pre>
+&lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;button type="reset"&gt;Reset&lt;/button&gt;
+      </pre>
+    </fieldset>
+    <br>
+
+    <!-- Full Form Example -->
+    <fieldset>
+      <legend>
+        <h2 id="cforms">Complete Form Example</h2>
+      </legend>
+      <pre>
+&lt;form action="submit.php" method="post"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;&lt;br&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+
+  &lt;label&gt;Gender:&lt;/label&gt;
+  &lt;input type="radio" name="gender" value="male"&gt; Male
+  &lt;input type="radio" name="gender" value="female"&gt; Female&lt;br&gt;
+
+  &lt;label&gt;Hobbies:&lt;/label&gt;
+  &lt;input type="checkbox" name="hobby" value="coding"&gt; Coding
+  &lt;input type="checkbox" name="hobby" value="reading"&gt; Reading&lt;br&gt;
+
+  &lt;label for="course"&gt;Course:&lt;/label&gt;
+  &lt;select id="course" name="course"&gt;
+    &lt;option&gt;HTML&lt;/option&gt;
+    &lt;option&gt;CSS&lt;/option&gt;
+    &lt;option&gt;JavaScript&lt;/option&gt;
+  &lt;/select&gt;&lt;br&gt;
+
+  &lt;label for="msg"&gt;Message:&lt;/label&gt;&lt;br&gt;
+  &lt;textarea id="msg" rows="4" cols="30"&gt;&lt;/textarea&gt;&lt;br&gt;
+
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+      </pre>
+    </fieldset>
+
+    <p align="center"><a href="#top">⬆ Back to Top</a></p>
+    <hr>
+    <p align="center"><em>Next Lecture: <b>Lecture 6 — HTML Media</b></em></p>
+  </main>
+  <!-- Main End -->
+
+  <!-- Footer Start -->
+  <footer>
+    <hr>
+    <center>
+      <p>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About Us</a> |
+        <a href="contact.html">Contact</a> |
+        <label for="social">Follow Me :-</label>
+        <select id="social" onchange="location = this.value;">
+          <option disabled selected>My Social Handles</option>
+          <option value="https://www.linkedin.com/in/akash-naik-108643355/">LinkedIn</option>
+          <option value="https://www.instagram.com/the_rising_sky_/">Instagram</option>
+        </select>
+      </p>
+      <p><small>© 2025 Akash Naik | HTML Hackathon Project</small></p>
+    </center>
+  </footer>
+  <!-- Footer End -->
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture 6 Notes | Notes Hub</title>
+</head>
+
+<body>
+  <!-- Header Start -->
+  <header>
+    <div align="center">
+      <h1>&#9733; Welcome to Notes Hub &#9733;</h1>
+      <p>This website contains all my lecture notes from <b>Rohit Negi</b> Bhaiya's classes.</p>
+    </div>
+
+    <hr>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a> &nbsp; | &nbsp;
+
+      <label for="videos">Videos:</label>
+      <select id="videos" onchange="location = this.value;">
+        <option disabled selected>HTML Lectures</option>
+        <option value="https://www.youtube.com/watch?v=1pcikNlDB-4&t=6s">Lecture 1 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=GkZN_-HMCJ8">Lecture 2 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=AJ4E1zf5tQs&t=1s">Lecture 3 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=k78lNSAB8VY">Lecture 4 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=a4j9R_DvZ8M&t=7s">Lecture 5 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=NGYp1zCBthk&t=3s">Lecture 6 [HTML]</option>
+        <option disabled selected>CSS Lectures</option>
+        <option value="https://www.youtube.com/watch?v=7rrUVevoECg&t=2355s">Lecture 1 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=MluY-_FUxFI">Lecture 2 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=HwvOyrPDqhM">Lecture 3 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=KD5mNp8PTko">Lecture 4 [CSS]</option>
+        <option disabled selected>Coming Soon...</option>
+      </select>
+
+      &nbsp; | &nbsp;
+
+      <label for="notes">Notes:</label>
+      <select id="notes" onchange="location = this.value;">
+        <option disabled selected>HTML Notes</option>
+        <option value="lecture1.html">Lecture 1 [HTML]</option>
+        <option value="lecture2.html">Lecture 2 [HTML]</option>
+        <option value="lecture3.html">Lecture 3 [HTML]</option>
+        <option value="lecture4.html">Lecture 4 [HTML]</option>
+        <option value="lecture5.html">Lecture 5 [HTML]</option>
+        <option value="lecture6.html">Lecture 6 [HTML]</option>
+      </select>
+
+      &nbsp; | &nbsp;
+
+      <a href="about.html">About Us</a> &nbsp; | &nbsp;
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <hr>
+
+    <!-- Marquee -->
+    <marquee>
+      ✨ Welcome to Notes Hub by "Akash Naik" | Learn Web Development with Rohit Negi Bhaiya ✨
+    </marquee>
+
+    <hr>
+  </header>
+  <!-- Header End -->
+
+  <!-- Main Section -->
+  <main id="top">
+    <h1 align="center">Lecture 6 — HTML Media</h1>
+    <p align="center"><em>Topics: Video, Audio, Video Attributes, Cross-Browser Media, Accessibility, Copyright</em></p>
+    <hr>
+
+        <!-- Table of Contents -->
+    <fieldset>
+      <legend><b><em>Table of Contents</em></b></legend>
+      <ul>
+        <li><a href="#first">First Principle</a></li>
+        <li><a href="#video">Video Attribute</a></li>
+        <li><a href="#cross">Cross Browser Media</a></li>
+        <li><a href="#tracks">Accessibility with Tracks</a></li>
+        <li><a href="#copy">Copyright Symbel</a></li>
+      </ul>
+
+    <!-- Lecture Content Table Sections -->
+    <fieldset>
+      <legend><h2 id="first">First Principle</h2></legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <td width="70%">
+            <p>The web is more than just text and images. Earlier browsers needed plugins like Flash or QuickTime to play media, which was inefficient and insecure.</p>
+            <p><b>Solution:</b> HTML5 introduced <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> tags for native, plugin-free media.</p>
+          </td>
+          <td width="30%">
+            <b>Example:</b><br>
+            <pre>
+&lt;video src="my-awesome-video.mp4"&gt;&lt;/video&gt;
+&lt;audio src="audio/theme-song.mp3" controls&gt;&lt;/audio&gt;
+            </pre>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <fieldset>
+      <legend><h2 id="video">Video Attributes</h2></legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <td width="70%">
+            <ul>
+              <li><b>width / height</b> → Set player size</li>
+              <li><b>autoplay + muted</b> → Start video automatically (with no sound)</li>
+              <li><b>loop</b> → Restart video automatically</li>
+              <li><b>poster</b> → Thumbnail image before play</li>
+            </ul>
+          </td>
+          <td width="30%">
+            <b>Example:</b><br>
+            <pre>
+&lt;video src="video.mp4" width="640" height="360" autoplay muted loop poster="thumbnail.jpg" controls&gt;&lt;/video&gt;
+            </pre>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <fieldset>
+      <legend><h2 id="cross">Cross-Browser Media</h2></legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <td width="70%">
+            <p>Different browsers support different formats. Use <code>&lt;source&gt;</code> inside <code>&lt;video&gt;</code> for better compatibility.</p>
+          </td>
+          <td width="30%">
+            <b>Example:</b><br>
+            <pre>
+&lt;video controls poster="images/thumbnail.jpg"&gt;
+  &lt;source src="videos/my-video.webm" type="video/webm"&gt;
+  &lt;source src="videos/my-video.mp4" type="video/mp4"&gt;
+  Sorry, your browser doesn't support embedded videos.
+&lt;/video&gt;
+            </pre>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <fieldset>
+      <legend><h2 id="tracks">Accessibility with &lt;track&gt;</h2></legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <td width="70%">
+            <p>Add captions or subtitles to make your media accessible to all users.</p>
+          </td>
+          <td width="30%">
+            <b>Example:</b><br>
+            <pre>
+&lt;video controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;track src="captions_en.vtt" kind="captions" srclang="en" label="English"&gt;
+  &lt;track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Español"&gt;
+&lt;/video&gt;
+            </pre>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <fieldset>
+      <legend><h2 id="copy">© Copyright Symbol</h2></legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <td width="70%">
+            <p>Use <code>&amp;copy;</code> or <code>&amp;#169;</code> to add copyright symbol in footer.</p>
+          </td>
+          <td width="30%">
+            <b>Example:</b><br>
+            <pre>
+&lt;footer&gt;
+  &lt;p&gt;Copyright &amp;copy; 2024 My Awesome Website. All Rights Reserved.&lt;/p&gt;
+&lt;/footer&gt;
+            </pre>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <p align="center"><a href="#top">⬆ Back to Top</a></p>
+    <hr>
+    <p align="center"><em>Next Lecture: <b>Lecture 1 — Introduction to CSS</b></em></p>
+  </main>
+  <!-- Main End -->
+
+  <!-- Footer Start -->
+  <footer>
+    <hr>
+    <center>
+      <p>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About Us</a> |
+        <a href="contact.html">Contact</a> |
+        <label for="social">Follow Me :-</label>
+        <select id="social" onchange="location = this.value;">
+          <option disabled>My Social Handles</option>
+          <option value="https://www.linkedin.com/in/akash-naik-108643355/">Linked In</option>
+          <option value="https://www.instagram.com/the_rising_sky_/">Instagram</option>
+        </select>
+      </p>
+      <p><small>© 2025 Akash Naik | HTML Hackathon Project</small></p>
+    </center>
+  </footer>
+  <!-- Footer End -->
+</body>
+
+</html>

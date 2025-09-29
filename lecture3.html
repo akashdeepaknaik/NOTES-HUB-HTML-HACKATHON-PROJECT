@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lecture 3 | Notes Hub</title>
+</head>
+
+<body>
+   <!-- Header Start -->
+  <header>
+    <div align="center">
+      <h1>&#9733; Welcome to Notes Hub &#9733;</h1>
+      <p>This website contains all my lecture notes from <b>Rohit Negi</b> Bhaiya's classes.</p>
+    </div>
+
+    <hr>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a> &nbsp; | &nbsp;
+
+      <label for="videos">Videos:</label>
+      <select id="videos" onchange="location = this.value;">
+        <option disabled selected>HTML Lectures</option>
+        <option value="https://www.youtube.com/watch?v=1pcikNlDB-4&t=6s">Lecture 1 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=GkZN_-HMCJ8">Lecture 2 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=AJ4E1zf5tQs&t=1s">Lecture 3 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=k78lNSAB8VY">Lecture 4 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=a4j9R_DvZ8M&t=7s">Lecture 5 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=NGYp1zCBthk&t=3s">Lecture 6 [HTML]</option>
+        <option disabled selected>CSS Lectures</option>
+        <option value="https://www.youtube.com/watch?v=7rrUVevoECg&t=2355s">Lecture 1 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=MluY-_FUxFI">Lecture 2 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=HwvOyrPDqhM">Lecture 3 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=KD5mNp8PTko">Lecture 4 [CSS]</option>
+        <option disabled selected>Coming Soon...</option>
+      </select>
+
+      &nbsp; | &nbsp;
+
+      <label for="notes">Notes:</label>
+      <select id="notes" onchange="location = this.value;">
+        <option disabled selected>HTML Notes</option>
+        <option value="lecture1.html">Lecture 1 [HTML]</option>
+        <option value="lecture2.html">Lecture 2 [HTML]</option>
+        <option value="lecture3.html">Lecture 3 [HTML]</option>
+        <option value="lecture4.html">Lecture 4 [HTML]</option>
+        <option value="lecture5.html">Lecture 5 [HTML]</option>
+        <option value="lecture6.html">Lecture 6 [HTML]</option>
+      </select>
+
+      &nbsp; | &nbsp;
+
+      <a href="about.html">About Us</a> &nbsp; | &nbsp;
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <hr>
+
+    <!-- Marquee -->
+    <marquee>
+      ✨ Welcome to Notes Hub by "Akash Naik" | Learn Web Development with Rohit Negi Bhaiya ✨
+    </marquee>
+
+    <hr>
+  </header>
+
+   <!-- Header Finished Here -->
+   <main>
+      <h1 align="center">Lecture 3 — Nested Lists in HTML</h1>
+      <hr>
+
+      <!-- Table of Contents -->
+      <fieldset>
+         <legend><b><em>Table of Contents</em></b></legend>
+         <ul>
+            <li><a href="#nlist">Nested Lists</a></li>
+            <li><a href="#examples">Examples</a></li>
+         </ul>
+      </fieldset>
+
+      <!-- Nested List Explanation -->
+      <fieldset>
+         <legend>
+            <h2 id="nlist">Nested Lists</h2>
+         </legend>
+
+         <table border="1" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+               <!-- Content Column -->
+               <td width="70%">
+                  <h2>Definition and Usage</h2>
+                  <p>
+                     A <b>nested list</b> means placing a list inside another list.
+                     Both <code>&lt;ul&gt;</code> (unordered list) and <code>&lt;ol&gt;</code> (ordered list) can be
+                     nested.
+                  </p>
+
+                  <h3>Types of Nested Lists:</h3>
+                  <ul>
+                     <li>Nested Unordered List (ul inside ul)</li>
+                     <li>Nested Ordered List (ol inside ol)</li>
+                     <li>Mixed Nested List (ol inside ul or ul inside ol)</li>
+                  </ul>
+               </td>
+
+               <!-- Code Column -->
+               <td width="30%" align="center">
+                  <p><b>Code Screenshot</b></p>
+                  <img src="./Notes Images/nested.png" alt="Nested List Code" width="100%">
+               </td>
+            </tr>
+         </table>
+      </fieldset>
+
+      <!-- Example 1 -->
+      <fieldset>
+         <legend><em><b>
+                  <h2 id="examples">Example 1: Nested Unordered List</h2>
+               </b></em></legend>
+         <table border="1" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+               <td width="70%">
+                  <p><b>Code:</b></p>
+                  <pre>
+&lt;ul&gt;
+  &lt;li&gt;Fruits
+    &lt;ul&gt;
+      &lt;li&gt;Apple&lt;/li&gt;
+      &lt;li&gt;Mango&lt;/li&gt;
+      &lt;li&gt;Banana&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Vegetables
+    &lt;ul&gt;
+      &lt;li&gt;Carrot&lt;/li&gt;
+      &lt;li&gt;Potato&lt;/li&gt;
+      &lt;li&gt;Spinach&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+               </td>
+               <td width="30%">
+                  <p><b>Output:</b></p>
+                  <ul>
+                     <li>Fruits
+                        <ul>
+                           <li>Apple</li>
+                           <li>Mango</li>
+                           <li>Banana</li>
+                        </ul>
+                     </li>
+                     <li>Vegetables
+                        <ul>
+                           <li>Carrot</li>
+                           <li>Potato</li>
+                           <li>Spinach</li>
+                        </ul>
+                     </li>
+                  </ul>
+               </td>
+            </tr>
+         </table>
+      </fieldset>
+
+      <!-- Example 2 -->
+      <fieldset>
+         <legend><em><b>
+                  <h2>Example 2: Nested Ordered List</h2>
+               </b></em></legend>
+         <table border="1" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+               <td width="70%">
+                  <p><b>Code:</b></p>
+                  <pre>
+&lt;ol&gt;
+  &lt;li&gt;Frontend
+    &lt;ol&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+      &lt;li&gt;JavaScript&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Backend
+    &lt;ol&gt;
+      &lt;li&gt;Node.js&lt;/li&gt;
+      &lt;li&gt;Python&lt;/li&gt;
+      &lt;li&gt;Java&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+               </td>
+               <td width="30%">
+                  <p><b>Output:</b></p>
+                  <ol>
+                     <li>Frontend
+                        <ol>
+                           <li>HTML</li>
+                           <li>CSS</li>
+                           <li>JavaScript</li>
+                        </ol>
+                     </li>
+                     <li>Backend
+                        <ol>
+                           <li>Node.js</li>
+                           <li>Python</li>
+                           <li>Java</li>
+                        </ol>
+                     </li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+      </fieldset>
+
+      <!-- Example 3 -->
+      <fieldset>
+         <legend><em><b>
+                  <h2>Example 3: Mixed Nested List</h2>
+               </b></em></legend>
+         <table border="1" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+               <td width="70%">
+                  <p><b>Code:</b></p>
+                  <pre>
+&lt;ol&gt;
+  &lt;li&gt;Web Development
+    &lt;ul&gt;
+      &lt;li&gt;Frontend&lt;/li&gt;
+      &lt;li&gt;Backend&lt;/li&gt;
+      &lt;li&gt;Database&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Data Science
+    &lt;ul&gt;
+      &lt;li&gt;Python&lt;/li&gt;
+      &lt;li&gt;Machine Learning&lt;/li&gt;
+      &lt;li&gt;AI&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+               </td>
+               <td width="30%">
+                  <p><b>Output:</b></p>
+                  <ol>
+                     <li>Web Development
+                        <ul>
+                           <li>Frontend</li>
+                           <li>Backend</li>
+                           <li>Database</li>
+                        </ul>
+                     </li>
+                     <li>Data Science
+                        <ul>
+                           <li>Python</li>
+                           <li>Machine Learning</li>
+                           <li>AI</li>
+                        </ul>
+                     </li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+      </fieldset>
+
+      <!-- Back to Top -->
+      <p align="center"><a href="#top">⬆ Back to Top</a></p>
+      <hr>
+   </main>
+   <!-- Footer Start -->
+   <footer>
+      <hr>
+      <center>
+         <p>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a> |
+            <label for="social">Follow Me :-</label>
+            <select id="social" onchange="location = this.value;">
+               <option disabled>My Social Handles</option>
+               <option value="https://www.linkedin.com/in/akash-naik-108643355/">Linked In</option>
+               <option value="https://www.instagram.com/the_rising_sky_/">Instagram</option>
+            </select>
+         </p>
+         <p><small>© 2025 Akash Naik | HTML Hackathon Project</small></p>
+      </center>
+   </footer>
+   <!-- Footer End -->
+</body>
+
+</html>

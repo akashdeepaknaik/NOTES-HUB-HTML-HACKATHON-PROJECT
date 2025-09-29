@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lecture 1 Notes | Notes Hub</title>
+</head>
+
+<body>
+  <!-- Header Start -->
+  <header>
+    <div align="center">
+      <h1>&#9733; Welcome to Notes Hub &#9733;</h1>
+      <p>This website contains all my lecture notes from <b>Rohit Negi</b> Bhaiya's classes.</p>
+    </div>
+
+    <hr>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a> &nbsp; | &nbsp;
+
+      <label for="videos">Videos:</label>
+      <select id="videos" onchange="location = this.value;">
+        <option disabled selected>HTML Lectures</option>
+        <option value="https://www.youtube.com/watch?v=1pcikNlDB-4&t=6s">Lecture 1 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=GkZN_-HMCJ8">Lecture 2 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=AJ4E1zf5tQs&t=1s">Lecture 3 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=k78lNSAB8VY">Lecture 4 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=a4j9R_DvZ8M&t=7s">Lecture 5 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=NGYp1zCBthk&t=3s">Lecture 6 [HTML]</option>
+        <option disabled selected>CSS Lectures</option>
+        <option value="https://www.youtube.com/watch?v=7rrUVevoECg&t=2355s">Lecture 1 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=MluY-_FUxFI">Lecture 2 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=HwvOyrPDqhM">Lecture 3 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=KD5mNp8PTko">Lecture 4 [CSS]</option>
+        <option disabled selected>Coming Soon...</option>
+      </select>
+
+      &nbsp; | &nbsp;
+
+      <label for="notes">Notes:</label>
+      <select id="notes" onchange="location = this.value;">
+        <option disabled selected>HTML Notes</option>
+        <option value="lecture1.html">Lecture 1 [HTML]</option>
+        <option value="lecture2.html">Lecture 2 [HTML]</option>
+        <option value="lecture3.html">Lecture 3 [HTML]</option>
+        <option value="lecture4.html">Lecture 4 [HTML]</option>
+        <option value="lecture5.html">Lecture 5 [HTML]</option>
+        <option value="lecture6.html">Lecture 6 [HTML]</option>
+      </select>
+
+      &nbsp; | &nbsp;
+
+      <a href="about.html">About Us</a> &nbsp; | &nbsp;
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <hr>
+
+    <!-- Marquee -->
+    <marquee>
+      ✨ Welcome to Notes Hub by "Akash Naik" | Learn Web Development with Rohit Negi Bhaiya ✨
+    </marquee>
+
+    <hr>
+  </header>
+  <!-- Header End -->
+
+  <!-- Main Content -->
+  <main id="top">
+
+    <!-- Title -->
+    <h1 align="center">Lecture 1 — How DNS Works?</h1>
+    <p align="center"><em>A kid-friendly explanation with a gaming analogy.</em></p>
+    <hr>
+
+    <!-- Table of Contents -->
+    <fieldset>
+      <legend><b><em>Table of Contents</em></b></legend>
+      <ul>
+        <li><a href="#short">Short Summary</a></li>
+        <li><a href="#analogy">Gaming-World Analogy</a></li>
+        <li><a href="#flow">DNS Flow (Technical)</a></li>
+        <li><a href="#diagram">DNS Flow Diagram</a></li>
+        <li><a href="#real">Real Example</a></li>
+        <li><a href="#cheats">DNS Cheat Answer</a></li>
+        <li><a href="#glossary">Glossary</a></li>
+        <li><a href="#faq">Quick FAQ</a></li>
+        <li><a href="#commands">Useful Commands</a></li>
+      </ul>
+    </fieldset>
+    <br>
+
+    <!-- Short Summary -->
+    <fieldset id="short">
+      <legend><b><em>Short Summary</em></b></legend>
+      <p>
+        DNS (Domain Name System) is the internet's phonebook.
+        It turns names like <code>google.com</code> into IP addresses like <code>142.250.72.206</code>.
+        Your browser then uses that address to connect to the correct server.
+      </p>
+    </fieldset>
+    <br>
+
+    <!-- Gaming Analogy -->
+    <fieldset id="analogy">
+      <legend><b><em>Gaming-World Analogy</em></b></legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <caption><em>Analogy: Finding a friend's house like DNS</em></caption>
+        <tr valign="top">
+          <td width="65%">
+            <ol>
+              <br>
+              <li>You (Browser) check memory: Do I already remember DragonSlayer99's house?</li>
+              <br><br>
+              <li>Check diary (OS cache): Look into your notes.</li>
+              <br><br>
+              <li>Ask gatekeeper (Router): Maybe he remembers.</li>
+              <br><br>
+              <li>Call Local Guide (Resolver): If not, he promises to find it.</li>
+              <br><br>
+              <li>City Office (Root Servers): Guide asks which area handles ".com".</li>
+              <br><br>
+              <li>Area Office (TLD): Guide asks who manages "google.com".</li>
+              <br><br>
+              <li>Google’s Office (Authoritative): Exact house number (IP) is given.</li>
+              <br><br>
+              <li>Guide returns → Gives you the IP and remembers it for later.</li>
+              <br><br>
+              <li>You connect: You now enter the correct house (website/game).</li>
+            </ol>
+          </td>
+          <td width="35%" align="center">
+            <figure>
+              <img src="./Notes Images/gaming.png" alt="Gaming World Analogy" width="95%">
+              <figcaption><em>Fig 1: Gaming Analogy</em></figcaption>
+            </figure>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <!-- Technical Flow -->
+    <fieldset id="flow">
+      <legend><b><em>DNS Flow (Technical)</em></b></legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <caption><em>How DNS Resolves Step by Step</em></caption>
+        <tr valign="top">
+          <td width="65%">
+            <ol>
+              <li>Browser checks browser cache.</li>
+              <br><br>
+              <li>If missing → OS cache.</li>
+              <br><br>
+              <li>If missing → Router cache.</li>
+              <br><br>
+              <li>If still missing → Recursive Resolver (ISP/public).</li>
+              <br><br>
+              <li>Resolver asks Root → TLD → Authoritative servers.</li>
+              <br><br>
+              <li>Authoritative server returns IP.</li>
+              <br><br>
+              <li>Resolver caches the IP and sends it back.</li>
+              <br><br>
+              <li>Browser connects via IP (usually HTTPS, port 443).</li>
+            </ol>
+          </td>
+          <td width="35%" align="center">
+            <figure>
+              <img src="./Notes Images/DNS PROCESS.png" alt="DNS Process Flow" width="95%">
+              <figcaption><em>Fig 2: Technical DNS Flow</em></figcaption>
+            </figure>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <!-- ASCII Diagram -->
+    <fieldset id="diagram">
+      <legend><b><em>DNS Flow Diagram</em></b></legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <caption><em>ASCII + Visual Flow</em></caption>
+        <tr valign="top">
+          <td width="65%">
+            <pre>
+              <br><br><br>
+<h2>[Browser] → [OS Cache] → [Router Cache] → [Resolver]
+                ↓               ↓
+            [Root] → [TLD] → [Authoritative]
+                         ↓
+                      [IP Address]</h2>
+            </pre>
+            <p>This ASCII diagram shows the path from your browser to the final IP address.</p>
+          </td>
+          <td width="35%" align="center">
+            <figure>
+              <img src="./Notes Images/DNS Resolution Path.png" alt="DNS Flow Diagram" width="95%">
+              <figcaption><em>Fig 3: DNS Resolution Path</em></figcaption>
+            </figure>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <!-- Real Example -->
+    <fieldset id="real">
+      <legend><b><em>Real Example</em></b></legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <caption><em>DNS in Action: Google.com</em></caption>
+        <tr valign="top">
+          <td width="65%">
+            <br><br>
+            <p>If you type <b>Google.com</b>:</p>
+            <ol>
+              <li>DNS resolves it to <b>142.250.72.206</b></li>
+              <li>Browser then loads Google’s homepage from that IP.</li>
+            </ol>
+            <br><br><br>
+            <h3>Quick Explanation:</h3>
+            <ol>
+              <li>Browser checks its cache → OS cache → Router cache.</li>
+              <li>If not found, query goes to Resolver (ISP/public).</li>
+              <li>Resolver asks Root → TLD → Authoritative server.</li>
+              <li>Authoritative server gives final IP.</li>
+              <li>Browser connects to the server using that IP.</li>
+            </ol>
+          </td>
+          <td width="35%" align="center">
+            <figure>
+              <img src="Notes Images/real example.png" alt="Real DNS Example" width="95%">
+              <figcaption><em>Fig 4: Real Google.com DNS Resolution</em></figcaption>
+            </figure>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <!-- Cheat Answer -->
+    <fieldset id="cheats">
+      <legend><b><em>DNS Cheat Answer</em></b></legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <caption><em>One Line DNS Definition</em></caption>
+        <tr valign="top">
+          <td width="65%">
+            <p>
+              <b>DNS is the internet's phonebook:</b> it maps human-readable names
+              <b>(Google.com)</b> to IP addresses <b>(142.250.72.206)</b>.
+              The browser uses this IP to connect to the server.
+              <br><br>
+              It converts easy-to-remember domain names like Google.com into machine-readable IP addresses like
+              142.250.72.206
+            </p>
+            <ul>
+              <br>
+              <li>Without DNS, we would need to memorize long strings of numbers for every website.</li>
+              <br>
+              <li>DNS works silently in the background, completing the lookup in milliseconds.</li>
+              <br>
+              <li>Once resolved, the IP is cached so the next visit is even faster.</li>
+              <br>
+              <li>It ensures that no matter where you are in the world, typing Google.com takes you to the correct
+                Google server.</li>
+            </ul>
+            <br>
+            <p>
+              <b>In short:</b> DNS makes the web simple, fast, and human-friendly by bridging the gap between names and
+              numbers.
+            </p>
+          </td>
+          <td width="35%" align="center">
+            <figure>
+              <img src="Notes Images/cheat answer.png" alt="DNS Cheat Answer" width="95%">
+              <figcaption><em>Fig 5: DNS in one line</em></figcaption>
+            </figure>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <!-- Glossary -->
+    <fieldset id="glossary">
+      <legend><b><em>Glossary</em></b></legend>
+      <dl>
+        <dt><b>DNS</b></dt>
+        <dd>Domain Name System – translates domain names to IP addresses.</dd>
+        <dt><b>IP Address</b></dt>
+        <dd>Unique number that identifies a server on the internet.</dd>
+        <dt><b>Resolver</b></dt>
+        <dd>Server that finds the IP address for your query.</dd>
+      </dl>
+    </fieldset>
+    <br>
+
+    <!-- FAQ -->
+    <fieldset id="faq">
+      <legend><b><em>Quick FAQ</em></b></legend>
+      <details>
+        <summary><b>Q:</b> What if DNS fails?</summary>
+        <p><b>A:</b> You see an error like "DNS_PROBE_FINISHED_NXDOMAIN".</p>
+      </details>
+      <details>
+        <summary><b>Q:</b> Who provides DNS?</summary>
+        <p><b>A:</b> Usually your ISP, or public resolvers like Google (8.8.8.8).</p>
+      </details>
+      <details>
+        <summary><b>Q:</b> Is DNS secure?</summary>
+        <p><b>A:</b> DNS can be spoofed, that’s why DNSSEC was introduced.</p>
+      </details>
+    </fieldset>
+    <br>
+
+    <!-- Commands -->
+    <fieldset id="commands">
+      <legend><b><em>Useful Commands</em></b></legend>
+      <pre>
+<b>Windows:</b>
+  nslookup google.com
+
+<b>macOS / Linux:</b>
+  dig google.com
+       or
+  nslookup google.com
+      </pre>
+      <p>These commands show the IP address for a domain.</p>
+    </fieldset>
+    <br>
+
+    <!-- Navigation -->
+    <p align="center"><a href="#top">⬆ Back to Top</a></p>
+    <hr>
+    <p align="center"><em>Next Lecture: <b>Lecture 2 — Introduction to Web Development</b></em></p>
+  </main>
+  <!-- Main End -->
+
+  <!-- Footer Start -->
+  <footer>
+    <hr>
+    <div align="center">
+      <p>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About Us</a> |
+        <a href="contact.html">Contact</a> |
+        <label for="social">Follow Me:</label>
+        <select id="social" onchange="window.open(this.value,'_blank');">
+          <option disabled selected>My Social Handles</option>
+          <option value="https://www.linkedin.com/in/akash-naik-108643355/">LinkedIn</option>
+          <option value="https://www.instagram.com/the_rising_sky_/">Instagram</option>
+        </select>
+      </p>
+      <p><small>© 2025 Akash Naik | HTML Hackathon Project</small></p>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+</body>
+
+</html>

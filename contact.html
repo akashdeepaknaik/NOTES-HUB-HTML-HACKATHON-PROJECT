@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Contact | Notes Hub</title>
+</head>
+
+<body>
+   <!-- Header Start -->
+   <header>
+      <center>
+         <h1>&#9733; Welcome to Notes Hub &#9733;</h1>
+         <p>
+            This website contains all my lecture notes from <b>Rohit Negi</b> Bhaiya's classes.
+         </p>
+      </center>
+
+      <hr>
+      <nav>
+         <a href="index.html">Home</a>
+
+         &nbsp;
+         <label for="videos">Videos :-</label>
+         <select id="videos" onchange="location = this.value;">
+            <option disabled selected>HTML Lectures</option>
+            <option value="https://www.youtube.com/watch?v=1pcikNlDB-4&t=6s">Lecture 1 [HTML]</option>
+            <option value="https://www.youtube.com/watch?v=GkZN_-HMCJ8">Lecture 2 [HTML]</option>
+            <option value="https://www.youtube.com/watch?v=AJ4E1zf5tQs&t=1s">Lecture 3 [HTML]</option>
+            <option value="https://www.youtube.com/watch?v=k78lNSAB8VY">Lecture 4 [HTML]</option>
+            <option value="https://www.youtube.com/watch?v=a4j9R_DvZ8M&t=7s">Lecture 5 [HTML]</option>
+            <option value="https://www.youtube.com/watch?v=NGYp1zCBthk&t=3s">Lecture 6 [HTML]</option>
+            <option disabled selected>CSS Lectures</option>
+            <option value="https://www.youtube.com/watch?v=7rrUVevoECg&t=2355s">Lecture 1 [CSS]</option>
+            <option value="https://www.youtube.com/watch?v=MluY-_FUxFI">Lecture 2 [CSS]</option>
+            <option value="https://www.youtube.com/watch?v=HwvOyrPDqhM">Lecture 3 [CSS]</option>
+            <option value="https://www.youtube.com/watch?v=KD5mNp8PTko">Lecture 4 [CSS]</option>
+            <option disabled selected>Coming Soon...</option>
+            <option disabled selected>Select Lectures</option>
+         </select>
+
+         &nbsp;
+         <label for="notes">Notes :-</label>
+         <select id="notes" onchange="location = this.value;">
+            <option disabled selected>HTML Notes</option>
+            <option value="lecture1.html">Lecture 1 [HTML]</option>
+            <option value="lecture2.html">Lecture 2 [HTML]</option>
+            <option value="lecture3.html">Lecture 3 [HTML]</option>
+            <option value="lecture4.html">Lecture 4 [HTML]</option>
+            <option value="lecture5.html">Lecture 5 [HTML]</option>
+            <option disabled selected>More Coming Soon...</option>
+            <option disabled selected>Select Notes...</option>
+         </select>
+
+         &nbsp;
+         <a href="about.html">About Us</a>
+         &nbsp;
+         <a href="contact.html">Contact</a>
+      </nav>
+
+      <hr>
+      <marquee>
+         &#128165;Contact Us, We’d love to hear from you. &nbsp; Please fill in your details below. &nbsp;Our Contact
+         Details : support@noteshub.com.&#128165;
+      </marquee>
+      <hr>
+   </header>
+   <!-- Header Finished Here -->
+
+   <!-- Main content starts here -->
+   <main>
+      <h1 align="center">Contact Us</h1>
+      <p align="center">We’d love to hear from you. Please fill in your details below.</p>
+
+      <table border="1" align="center" cellpadding="10" cellspacing="0" width="60%">
+         <tr>
+            <th colspan="2">Send Us a Message</th>
+         </tr>
+         <tr>
+            <td><label for="name">Full Name:</label></td>
+            <td><input type="text" id="name" name="name" placeholder="Enter your name"></td>
+         </tr>
+         <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" id="email" name="email" placeholder="Enter your email"></td>
+         </tr>
+         <tr>
+            <td><label for="phone">Phone:</label></td>
+            <td><input type="tel" id="phone" name="phone" placeholder="Enter your phone number"></td>
+         </tr>
+         <tr>
+            <td><label for="subject">Subject:</label></td>
+            <td><input type="text" id="subject" name="subject" placeholder="Subject of your message"></td>
+         </tr>
+         <tr>
+            <td><label for="message">Message:</label></td>
+            <td><textarea id="message" name="message" rows="5" cols="40"
+                  placeholder="Write your message here"></textarea></td>
+         </tr>
+         <tr>
+            <td colspan="2" align="center">
+               <button>Send Message</button>
+            </td>
+         </tr>
+      </table>
+
+      <br><br>
+
+      <table border="1" align="center" cellpadding="10" cellspacing="0" width="60%">
+         <tr>
+            <th colspan="2">Our Contact Details</th>
+         </tr>
+         <tr>
+            <td><b>Email</b></td>
+            <td>support@noteshub.com</td>
+         </tr>
+         <tr>
+            <td><b>Phone</b></td>
+            <td>+91 12345 67890 </td>
+         </tr>
+         <tr>
+            <td><b>Address</b></td>
+            <td>123, Knowledge Street, Bengaluru, India</td>
+         </tr>
+      </table>
+   </main>
+   <!-- Main content ends here -->
+
+   <!-- Footer Start -->
+   <footer>
+      <hr>
+      <center>
+         <p>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a> |
+            <label for="social">Follow Me :-</label>
+            <select id="social" onchange="location = this.value;">
+               <option disabled>My Social Handles</option>
+               <option value="https://www.linkedin.com/in/akash-naik-108643355/">Linked In</option>
+               <option value="https://www.instagram.com/the_rising_sky_/">Instagram</option>
+            </select>
+         </p>
+         <p>
+            <small>© 2025 Akash Naik | HTML Hackathon Project</small>
+         </p>
+      </center>
+   </footer>
+   <!-- Footer End -->
+</body>
+
+</html>

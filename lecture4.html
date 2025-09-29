@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture 4 Notes | Notes Hub</title>
+</head>
+
+<body>
+  <!-- Header Start -->
+  <header>
+    <div align="center">
+      <h1>&#9733; Welcome to Notes Hub &#9733;</h1>
+      <p>This website contains all my lecture notes from <b>Rohit Negi</b> Bhaiya's classes.</p>
+    </div>
+
+    <hr>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a> &nbsp; | &nbsp;
+
+      <label for="videos">Videos:</label>
+      <select id="videos" onchange="location = this.value;">
+        <option disabled selected>HTML Lectures</option>
+        <option value="https://www.youtube.com/watch?v=1pcikNlDB-4&t=6s">Lecture 1 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=GkZN_-HMCJ8">Lecture 2 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=AJ4E1zf5tQs&t=1s">Lecture 3 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=k78lNSAB8VY">Lecture 4 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=a4j9R_DvZ8M&t=7s">Lecture 5 [HTML]</option>
+        <option value="https://www.youtube.com/watch?v=NGYp1zCBthk&t=3s">Lecture 6 [HTML]</option>
+        <option disabled selected>CSS Lectures</option>
+        <option value="https://www.youtube.com/watch?v=7rrUVevoECg&t=2355s">Lecture 1 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=MluY-_FUxFI">Lecture 2 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=HwvOyrPDqhM">Lecture 3 [CSS]</option>
+        <option value="https://www.youtube.com/watch?v=KD5mNp8PTko">Lecture 4 [CSS]</option>
+        <option disabled selected>Coming Soon...</option>
+      </select>
+
+      &nbsp; | &nbsp;
+
+      <label for="notes">Notes:</label>
+      <select id="notes" onchange="location = this.value;">
+        <option disabled selected>HTML Notes</option>
+        <option value="lecture1.html">Lecture 1 [HTML]</option>
+        <option value="lecture2.html">Lecture 2 [HTML]</option>
+        <option value="lecture3.html">Lecture 3 [HTML]</option>
+        <option value="lecture4.html">Lecture 4 [HTML]</option>
+        <option value="lecture5.html">Lecture 5 [HTML]</option>
+        <option value="lecture6.html">Lecture 6 [HTML]</option>
+      </select>
+
+      &nbsp; | &nbsp;
+
+      <a href="about.html">About Us</a> &nbsp; | &nbsp;
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <hr>
+
+    <!-- Marquee -->
+    <marquee>
+      ✨ Welcome to Notes Hub by "Akash Naik" | Learn Web Development with Rohit Negi Bhaiya ✨
+    </marquee>
+
+    <hr>
+  </header>
+  <!-- Header End -->
+
+  <!-- Main Start -->
+  <main id="top">
+    <h1 align="center">Lecture 4 — Important HTML Concepts</h1>
+    <p align="center"><em>Topics: File Paths, Boilerplate, Multipage Websites, div, span, semantic tags</em></p>
+    <hr>
+
+    <!-- Table of Contents -->
+    <fieldset>
+      <legend><b><em>Table of Contents</em></b></legend>
+      <ul>
+        <li><a href="#file">File Path System</a></li>
+        <li><a href="#boilerplate">HTML Boilerplate</a></li>
+        <li><a href="#multipage">Multipage Websites</a></li>
+        <li><a href="#div">Div , Class & ID</a></li>
+        <li><a href="#span">Span</a></li>
+        <li><a href="#sementic">Sementic Tag</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#c">Useful Commands</a></li>
+      </ul>
+    </fieldset>
+
+    <!-- File Path -->
+    <fieldset>
+      <legend>
+        <h2 id="file">File Path System</h2>
+      </legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <td width="70%">
+            <p><b>Fact:</b> A website is a collection of files (HTML, CSS, JS, Images).</p>
+            <br><br>
+            <ul>
+              <li>Same Folder → <code>&lt;a href="about.html"&gt;About&lt;/a&gt;</code></li>
+              <br><br><br>
+              <li>Sub Folder → <code>&lt;img src="images/logo.png"&gt;</code></li>
+              <br><br><br>
+              <li>Parent Folder → <code>&lt;img src="../images/logo.png"&gt;</code></li>
+              <br><br><br>
+              <li>Absolute URL → <code>&lt;img src="https://example.com/logo.png"&gt;</code></li>
+              <br><br><br>
+            </ul>
+          </td>
+          <td width="30%">
+            <b>Code Screenshot</b><br>
+            <img src="./Notes Images/file path.png" width="100%" alt="File Path Example">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <!-- Boilerplate -->
+    <fieldset>
+      <legend>
+        <h2 id="boilerplate">HTML Boilerplate</h2>
+      </legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <td width="70%">
+            <p>Every HTML document starts with this boilerplate structure.</p>
+          </td>
+          <td width="30%">
+            <b>Code</b>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <!-- Multipage Websites -->
+    <fieldset>
+      <legend>
+        <h2 id="multipage">Multipage Websites</h2>
+      </legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <td width="70%">
+            <p>A website usually has many pages (Home, About, Contact). All share the same <u>header & footer</u>.</p>
+          </td>
+          <td width="30%">
+            <b>Code</b>
+            <pre>
+&lt;nav&gt;
+  &lt;a href="home.html"&gt;Home&lt;/a&gt; |
+  &lt;a href="about.html"&gt;About&lt;/a&gt; |
+  &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+            </pre>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <!-- div, class, id -->
+    <fieldset>
+      <legend>
+        <h2 id="div">div, class, id</h2>
+      </legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <td width="70%">
+            <ul>
+              <li><b>id</b> → Unique identifier for one element.</li>
+              <br><br><br>
+              <li><b>class</b> → Reusable for multiple elements.</li>
+            </ul>
+          </td>
+          <td width="30%">
+            <b>Code</b>
+            <pre>
+&lt;div id="unique"&gt;Unique&lt;/div&gt;
+&lt;div class="card"&gt;Card 1&lt;/div&gt;
+&lt;div class="card"&gt;Card 2&lt;/div&gt;
+&lt;div id="special" class="card"&gt;Special&lt;/div&gt;
+            </pre>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <!-- span -->
+    <fieldset>
+      <legend>
+        <h2 id="span">span</h2>
+      </legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <td width="70%">
+            <p>The <b>span</b> tag highlights inline text.</p>
+          </td>
+          <td width="30%">
+            <b>Example</b><br>
+            This is very <span style="color:red;">important</span> content.
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <!-- Semantic Tags -->
+    <fieldset>
+      <legend>
+        <h2 id="sementic">Semantic Tags</h2>
+      </legend>
+      <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+          <td width="70%">
+            <ul>
+              <li><b>&lt;header&gt;</b> → Intro (logo, nav)</li>
+              <br><br><br>
+              <li><b>&lt;footer&gt;</b> → Closing info</li>
+              <br><br><br>
+              <li><b>&lt;main&gt;</b> → Unique content</li>
+              <br><br><br>
+              <li><b>&lt;article&gt;</b> → Self-contained content</li>
+              <br><br><br>
+              <li><b>&lt;section&gt;</b> → Thematic grouping</li>
+            </ul>
+          </td>
+          <td width="30%">
+            <b>Code Screenshot</b><br>
+            <img src="./Notes Images/semantic.png" width="100%" alt="Semantic Tags">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+
+    <!-- FAQ -->
+    <fieldset>
+      <legend>
+        <h2 id="faq">Quick FAQ</h2>
+      </legend>
+      <details>
+        <summary><b>Q:</b> Relative vs Absolute Path?</summary>
+        <p><b>A:</b> Relative = depends on folder structure, Absolute = complete URL.</p>
+      </details>
+      <details>
+        <summary><b>Q:</b> Why use semantic tags?</summary>
+        <p><b>A:</b> For readability, SEO, and accessibility.</p>
+      </details>
+    </fieldset>
+    <br>
+
+    <!-- Commands -->
+    <fieldset>
+      <legend>
+        <h2 id="c">Useful Commands</h2>
+      </legend>
+      <pre>
+<b>Create file:</b>
+  Windows: notepad index.html
+  Linux/Mac: touch index.html
+
+<b>Open in browser:</b>
+  Just double click the file
+      </pre>
+    </fieldset>
+
+    <p align="center"><a href="#top">⬆ Back to Top</a></p>
+    <hr>
+    <p align="center"><em>Next Lecture: <b>Lecture 5 — HTML Forms</b></em></p>
+  </main>
+  <!-- Main End -->
+
+  <!-- Footer Start -->
+  <footer>
+    <hr>
+    <center>
+      <p>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About Us</a> |
+        <a href="contact.html">Contact</a> |
+        <label for="social">Follow Me :-</label>
+        <select id="social" onchange="location = this.value;">
+          <option disabled selected>My Social Handles</option>
+          <option value="https://www.linkedin.com/in/akash-naik-108643355/">LinkedIn</option>
+          <option value="https://www.instagram.com/the_rising_sky_/">Instagram</option>
+        </select>
+      </p>
+      <p><small>© 2025 Akash Naik | HTML Hackathon Project</small></p>
+    </center>
+  </footer>
+  <!-- Footer End -->
+</body>
+
+</html>
